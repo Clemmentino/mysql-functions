@@ -4,17 +4,18 @@
 <meta charset="UTF-8">
 <title>MySQL Functions Demo</title>
 <style>
-body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }
-h1 { text-align: center; }
-table { border-collapse: collapse; width: 100%; background: #fff; margin-top: 20px; }
-th, td { border: 1px solid #ddd; padding: 10px; text-align: left; vertical-align: top; }
-th { background-color: #4CAF50; color: white; }
-tr:nth-child(even) { background-color: #f2f2f2; }
-code { background: #eee; padding: 2px 5px; display: block; }
-a { color: #007BFF; text-decoration: none; }
-a:hover { text-decoration: underline; }
+    body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }
+    h1 { text-align: center; }
+    table { border-collapse: collapse; width: 100%; background: #fff; margin-top: 20px; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; vertical-align: top; }
+    th { background-color: #4CAF50; color: white; }
+    tr:nth-child(even) { background-color: #f2f2f2; }
+    code { background: #eee; padding: 2px 5px; display: block; }
+    a { color: #007BFF; text-decoration: none; }
+    a:hover { text-decoration: underline; }
 </style>
 </head>
+
 <body>
 <h1>MySQL Functions Demo</h1>
 <table>
@@ -67,38 +68,38 @@ $functions = [
     ["ACOS","Arc cosine","SELECT ACOS(0.5)","numeric/acos.php"],
     ["ASIN","Arc sine","SELECT ASIN(0.5)","numeric/asin.php"],
     ["ATAN","Arc tangent","SELECT ATAN(1)","numeric/atan.php"],
-    ["ATAN2","Arc tangent of two numbers","SELECT ATAN2(1,1)","numeric/atan2.php"],
+    ["ATAN2","Arc tangent of two numbers","SELECT ATAN2(1,2) AS result","numeric/atan2.php"],
     ["AVG","Average value","SELECT AVG(number_value) FROM demo_data","numeric/avg.php"],
-    ["CEIL","Ceiling value","SELECT CEIL(4.3)","numeric/ceil.php"],
-    ["CEILING","Ceiling value","SELECT CEILING(4.3)","numeric/ceiling.php"],
-    ["COS","Cosine","SELECT COS(PI()/3)","numeric/cos.php"],
-    ["COT","Cotangent","SELECT COT(PI()/4)","numeric/cot.php"],
+    ["CEIL","Ceiling value","SELECT CEIL(number_value) AS result FROM demo_data","numeric/ceil.php"],
+    ["CEILING","Ceiling value","SELECT CEILING(number_value) AS result FROM demo_data","numeric/ceiling.php"],
+    ["COS","Cosine","SELECT COS(0)","numeric/cos.php"],
+    ["COT","Cotangent","SELECT COT(1)","numeric/cot.php"],
     ["COUNT","Count records","SELECT COUNT(*) FROM demo_data","numeric/count.php"],
-    ["DEGREES","Radians to degrees","SELECT DEGREES(PI()/2)","numeric/degrees.php"],
-    ["DIV","Integer division","SELECT 10 DIV 3","numeric/div.php"],
-    ["EXP","Exponential e^x","SELECT EXP(1)","numeric/exp.php"],
-    ["FLOOR","Floor value","SELECT FLOOR(4.7)","numeric/floor.php"],
-    ["GREATEST","Greatest value","SELECT GREATEST(10,20,5)","numeric/greatest.php"],
-    ["LEAST","Least value","SELECT LEAST(10,20,5)","numeric/least.php"],
-    ["LN","Natural logarithm","SELECT LN(10)","numeric/ln.php"],
+    ["DEGREES","Radians to degrees","SELECT DEGREES(PI()) AS result","numeric/degrees.php"],
+    ["DIV","Integer division","SELECT 10 DIV 3 AS result","numeric/div.php"],
+    ["EXP","Exponential e^x","SELECT EXP(2) AS result","numeric/exp.php"],
+    ["FLOOR","Floor value","SELECT FLOOR(number_value) AS result FROM demo_data","numeric/floor.php"],
+    ["GREATEST","Greatest value","SELECT GREATEST(1,5,3) AS result","numeric/greatest.php"],
+    ["LEAST","Least value","SELECT LEAST(1,5,3)","numeric/least.php"],
+    ["LN","Natural logarithm","SELECT LN(2)","numeric/ln.php"],
     ["LOG","Logarithm","SELECT LOG(10)","numeric/log.php"],
     ["LOG10","Log base 10","SELECT LOG10(100)","numeric/log10.php"],
     ["LOG2","Log base 2","SELECT LOG2(8)","numeric/log2.php"],
     ["MAX","Maximum value","SELECT MAX(number_value) FROM demo_data","numeric/max.php"],
     ["MIN","Minimum value","SELECT MIN(number_value) FROM demo_data","numeric/min.php"],
-    ["MOD","Modulo","SELECT MOD(10,3)","numeric/mod.php"],
+    ["MOD","Modulo","SELECT MOD(10,3) AS result","numeric/mod.php"],
     ["PI","Value of PI","SELECT PI()","numeric/pi.php"],
-    ["POW","Power","SELECT POW(2,3)","numeric/pow.php"],
+    ["POW","Power","SELECT POW(2,3) AS result","numeric/pow.php"],
     ["POWER","Power","SELECT POWER(2,3)","numeric/power.php"],
     ["RADIANS","Degrees to radians","SELECT RADIANS(180)","numeric/radians.php"],
     ["RAND","Random number","SELECT RAND()","numeric/rand.php"],
-    ["ROUND","Round number","SELECT ROUND(4.567,2)","numeric/round.php"],
-    ["SIGN","Sign of number","SELECT SIGN(-5)","numeric/sign.php"],
-    ["SIN","Sine","SELECT SIN(PI()/2)","numeric/sin.php"],
+    ["ROUND","Round number","SELECT ROUND(number_value,1) AS result FROM demo_data","numeric/round.php"],
+    ["SIGN","Sign of number","SELECT SIGN(number_value) AS result FROM demo_data","numeric/sign.php"],
+    ["SIN","Sine","SELECT SIN(1)","numeric/sin.php"],
     ["SQRT","Square root","SELECT SQRT(16)","numeric/sqrt.php"],
     ["SUM","Sum of values","SELECT SUM(number_value) FROM demo_data","numeric/sum.php"],
-    ["TAN","Tangent","SELECT TAN(PI()/4)","numeric/tan.php"],
-    ["TRUNCATE","Truncate number","SELECT TRUNCATE(4.567,2)","numeric/truncate.php"],
+    ["TAN","Tangent","SELECT TAN(1)","numeric/tan.php"],
+    ["TRUNCATE","Truncate number","SELECT TRUNCATE(number_value,1) AS result FROM demo_data","numeric/truncate.php"],
 
 
     // DATE FUNCTIONS
