@@ -1,0 +1,7 @@
+<?php
+    include "../db.php";
+    $result = $conn->query("SELECT TRIM('   MySQL   ') AS result");
+    $row = $result->fetch_assoc();
+?>
+<h2>TRIM Output</h2>
+<p><?= $row['result'] ?></p>
